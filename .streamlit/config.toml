@@ -1,0 +1,19 @@
+[theme]
+# Colores primarios - Usado para botones interactivos, sliders, etc.
+primaryColor="#2563EB"
+
+# Color de fondo principal de la aplicación
+backgroundColor="#F9F9F9"
+
+# Color de fondo para widgets y contenedores secundarios
+secondaryBackgroundColor="#FFFFFF"
+
+# Color del texto principal
+textColor="#333333"
+
+# Color de los textos de acento (títulos, encabezados)
+# Este es un azul oscuro que coincide con nuestros encabezados
+accentColor="#1E3A8A"
+
+# Fuente a utilizar en toda la aplicación
+font="sans serif"
