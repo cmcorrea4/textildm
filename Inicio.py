@@ -10,7 +10,7 @@ import tempfile
 
 # Configuración de la página
 st.set_page_config(
-    page_title="Asistente Convivencia CEFA",
+    page_title="Asistente Textil",
     page_icon="👬",
     layout="wide",
     initial_sidebar_state="collapsed",
@@ -163,7 +163,7 @@ def initialize_session_vars():
         st.session_state.is_configured = False
     if "agent_endpoint" not in st.session_state:
         # Endpoint fijo como solicitado
-        st.session_state.agent_endpoint = "https://jv2gsa34xn3vov7zosdvagru.agents.do-ai.run"
+        st.session_state.agent_endpoint = "https://uq726hao4xro7jumqyhtswwr.agents.do-ai.run"
     if "agent_access_key" not in st.session_state:
         st.session_state.agent_access_key = ""
     if "messages" not in st.session_state:
@@ -243,16 +243,16 @@ st.markdown("""
         Ejemplos de preguntas que puedes hacerle:
     </p>
     <div class="example-question">
-        <span>¿Cuáles son los objetivos principales de la Ley 1620 de 2013?</span>
+        <span>¿Quien es el proveedor de?</span>
     </div>
     <div class="example-question">
-        <span>¿Cuál es la definición y el propósito principal del Manual de Convivencia?</span>
+        <span>¿Como es la jota en la referencia jogger femenino?</span>
     </div>
     <div class="example-question">
-        <span>¿Qué sanciones implica el agredir a un compañero?</span>
+        <span>¿Cual es el tamaño del cierre para  LOW RISE-RUSTY?</span>
     </div>
     <div class="example-question">
-        <span>Carolina pérez golpea a Susana morales, en el salón de clase hoy 13 de mayo de 2025 a las 8:30 am, argumentando que susana Morales la agredió verbalmente, el Profesor Rubén Palacio las separó, ¿puedes elaborar el acta para este incidente?</span>
+        <span> Cual es la fecha de entrega de HORSEBEAT Monastery? </span>
     </div>
 </div>
 <div class='cefa-decoration'></div>
