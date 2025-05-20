@@ -17,10 +17,10 @@ st.set_page_config(
     menu_items=None
 )
 
-# Establecer tema personalizado con los colores del CEFA
+# Establecer tema personalizado con los colores corporativos
 st.markdown("""
 <style>
-    /* Tema claro personalizado con colores CEFA */
+    /* Tema claro personalizado con colores corporativos */
     body {
         color: #333333;
         background-color: #f9f9f9;
@@ -62,7 +62,7 @@ st.markdown("""
         background-color: #ffffff;
     }
     
-    /* Estilos personalizados para el asistente con colores CEFA */
+    /* Estilos personalizados para el asistente con colores corporativos */
     .main-header {
         font-size: 2.5rem;
         color: #006D2C;
@@ -70,7 +70,7 @@ st.markdown("""
         margin-bottom: 1.5rem;
         font-weight: bold;
         text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-        border-bottom: 3px solid #FFD700;
+        border-bottom: 3px solid #3366CC;
         padding-bottom: 10px;
     }
     .subheader {
@@ -92,7 +92,7 @@ st.markdown("""
         padding: 10px;
         font-size: 0.8rem;
         color: #666666;
-        border-top: 3px solid #FFD700;
+        border-top: 3px solid #3366CC;
     }
     
     /* Estilos para la barra lateral */
@@ -112,8 +112,8 @@ st.markdown("""
         border-left: 2px solid #008F39;
     }
     .stChatMessage.user {
-        background-color: rgba(255, 215, 0, 0.05);
-        border-left: 2px solid #FFD700;
+        background-color: rgba(51, 102, 204, 0.05);
+        border-left: 2px solid #3366CC;
     }
     .stChatMessage.assistant {
         background-color: rgba(0, 143, 57, 0.05);
@@ -133,17 +133,17 @@ st.markdown("""
         border-radius: 4px;
     }
     
-    /* Decoraciones con los colores CEFA */
-    .cefa-decoration {
-        background: linear-gradient(to right, #FFD700 50%, #008F39 50%);
+    /* Decoraciones con los colores corporativos */
+    .corp-decoration {
+        background: linear-gradient(to right, #3366CC 50%, #008F39 50%);
         height: 3px;
         width: 100%;
         margin: 10px 0;
     }
     
-    /* Estilo para ejemplos de preguntas con colores CEFA */
+    /* Estilo para ejemplos de preguntas con colores corporativos */
     .example-question {
-        background-color: rgba(255, 215, 0, 0.05);
+        background-color: rgba(51, 102, 204, 0.05);
         border-left: 3px solid #008F39;
         padding: 10px;
         margin-bottom: 8px;
@@ -197,11 +197,11 @@ def text_to_speech(text):
     except Exception as e:
         return f"<div style='color: #e53e3e; padding: 8px; background-color: #fff5f5; border-radius: 4px;'>Error al generar audio: {str(e)}</div>"
 
-# Título y logotipo del CEFA (banner con colores institucionales)
+# Título y logotipo (banner con colores institucionales)
 col1, col2, col3 = st.columns([1, 3, 1])
 with col2:
-    st.markdown("<h1 class='main-header'>Asistente Convivencia CEFA</h1>", unsafe_allow_html=True)
-    st.markdown("<div class='cefa-decoration'></div>", unsafe_allow_html=True)
+    st.markdown("<h1 class='main-header'>Asistente Textil</h1>", unsafe_allow_html=True)
+    st.markdown("<div class='corp-decoration'></div>", unsafe_allow_html=True)
 
 # Pantalla de configuración inicial si aún no se ha configurado
 if not st.session_state.is_configured:
@@ -234,9 +234,9 @@ if not st.session_state.is_configured:
     st.stop()
 
 # Una vez configurado, mostrar la interfaz normal
-st.markdown("<p class='subheader'>Interactúa con tu asistente de convivencia escolar.</p>", unsafe_allow_html=True)
+st.markdown("<p class='subheader'>Interactúa con tu asistente de industria textil.</p>", unsafe_allow_html=True)
 
-# Agregar ejemplos de preguntas con estilo profesional usando colores CEFA
+# Agregar ejemplos de preguntas con estilo profesional usando colores corporativos
 st.markdown("""
 <div style="margin-bottom: 20px;">
     <p style="font-size: 0.9rem; color: #006D2C; margin-bottom: 1rem; font-style: italic; font-family: 'Segoe UI', Arial, sans-serif;">
@@ -255,12 +255,12 @@ st.markdown("""
         <span> Cual es la fecha de entrega de HORSEBEAT Monastery? </span>
     </div>
 </div>
-<div class='cefa-decoration'></div>
+<div class='corp-decoration'></div>
 """, unsafe_allow_html=True)
 
 # Sidebar para configuración
 st.sidebar.markdown("<h2 style='color: #006D2C;'>Configuración</h2>", unsafe_allow_html=True)
-st.sidebar.markdown("<div class='cefa-decoration'></div>", unsafe_allow_html=True)
+st.sidebar.markdown("<div class='corp-decoration'></div>", unsafe_allow_html=True)
 
 # Mostrar información de conexión actual
 st.sidebar.success("✅ Configuración cargada")
@@ -336,7 +336,7 @@ with st.sidebar.expander("Probar conexión"):
 
 # Opciones de gestión de conversación
 st.sidebar.markdown("<h3 style='color: #008F39;'>Gestión de conversación</h3>", unsafe_allow_html=True)
-st.sidebar.markdown("<div class='cefa-decoration'></div>", unsafe_allow_html=True)
+st.sidebar.markdown("<div class='corp-decoration'></div>", unsafe_allow_html=True)
 
 # Botón para limpiar conversación
 if st.sidebar.button("🗑️ Limpiar conversación"):
@@ -349,17 +349,16 @@ if st.sidebar.button("💾 Guardar conversación en PDF"):
     pdf = FPDF()
     pdf.add_page()
     
-    # Configurar colores CEFA en el PDF
-    # Verde CEFA aproximado en RGB
-    pdf.set_draw_color(0, 143, 57)  # Verde CEFA
-    pdf.set_fill_color(255, 215, 0)  # Amarillo CEFA
+    # Configurar colores corporativos en el PDF
+    pdf.set_draw_color(0, 143, 57)  # Verde corporativo
+    pdf.set_fill_color(51, 102, 204)  # Azul corporativo
     
-    # Añadir título con colores CEFA
+    # Añadir título con colores corporativos
     pdf.set_font("Arial", 'B', 16)
-    pdf.set_text_color(0, 109, 44)  # Verde CEFA oscuro
-    pdf.cell(200, 10, "Conversación con el Asistente CEFA", ln=True, align='C')
+    pdf.set_text_color(0, 109, 44)  # Verde corporativo oscuro
+    pdf.cell(200, 10, "Conversación con el Asistente Textil", ln=True, align='C')
     
-    # Línea decorativa con colores CEFA
+    # Línea decorativa con colores corporativos
     pdf.line(10, 25, 200, 25)
     pdf.ln(15)
     
@@ -374,10 +373,10 @@ if st.sidebar.button("💾 Guardar conversación en PDF"):
     pdf.set_font("Arial", size=12)
     for msg in st.session_state.messages:
         if msg["role"] == "user":
-            pdf.set_text_color(0, 109, 44)  # Verde CEFA oscuro
+            pdf.set_text_color(0, 109, 44)  # Verde corporativo oscuro
             pdf.cell(200, 10, "Usuario:", ln=True)
         else:
-            pdf.set_text_color(184, 134, 11)  # Amarillo dorado oscuro
+            pdf.set_text_color(51, 102, 204)  # Azul corporativo
             pdf.cell(200, 10, "Asistente:", ln=True)
         
         pdf.set_text_color(0, 0, 0)  # Negro para el contenido
@@ -400,7 +399,7 @@ if st.sidebar.button("💾 Guardar conversación en PDF"):
     st.sidebar.download_button(
         label="Descargar PDF",
         data=pdf_data,
-        file_name="conversacion_convivencia_cefa.pdf",
+        file_name="conversacion_textil.pdf",
         mime="application/pdf",
     )
 
@@ -413,12 +412,12 @@ if st.sidebar.button("Cerrar sesión"):
 # Función para verificar si hay URLs de imagen en la respuesta
 def extract_and_process_images(text):
     import re
-    # Patrón específico para URLs de gráficos de tu sistema
+    # Patrón específico para URLs de gráficos del sistema
     chart_pattern = r'https?://[^\s\)\]\}]+/chart\?[^\s\)\]\}]+'
     
     # Patrones adicionales para otros tipos de imágenes
     image_patterns = [
-        chart_pattern,  # URLs de gráficos de tu sistema
+        chart_pattern,  # URLs de gráficos del sistema
         r'https?://[^\s\)\]\}]+\.(?:jpg|jpeg|png|gif|webp|svg)',
         r'https?://[^\s\)\]\}]+\.(?:JPG|JPEG|PNG|GIF|WEBP|SVG)',
         r'data:image/[^;]+;base64,[^\s]+'
@@ -532,9 +531,9 @@ with chat_container:
                 # Mostrar las imágenes encontradas
                 if image_urls:
                     for idx, img_url in enumerate(image_urls):
-                        # Crear un enlace estilizado con colores CEFA
+                        # Crear un enlace estilizado con colores corporativos
                         st.markdown(f"""
-                        <a href="{img_url}" target="_blank" style="display: inline-block; margin: 5px 0; padding: 8px 12px; background-color: rgba(255, 215, 0, 0.1); color: #006D2C; border-radius: 4px; text-decoration: none; font-size: 14px; border: 1px solid #008F39;">
+                        <a href="{img_url}" target="_blank" style="display: inline-block; margin: 5px 0; padding: 8px 12px; background-color: rgba(51, 102, 204, 0.1); color: #006D2C; border-radius: 4px; text-decoration: none; font-size: 14px; border: 1px solid #008F39;">
                             <span style="display: flex; align-items: center;">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#008F39" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px;">
                                     <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
@@ -595,9 +594,9 @@ if prompt:
                 # Mostrar las imágenes encontradas
                 if image_urls:
                     for idx, img_url in enumerate(image_urls):
-                        # Crear un enlace estilizado con colores CEFA
+                        # Crear un enlace estilizado con colores corporativos
                         st.markdown(f"""
-                        <a href="{img_url}" target="_blank" style="display: inline-block; margin: 5px 0; padding: 8px 12px; background-color: rgba(255, 215, 0, 0.1); color: #006D2C; border-radius: 4px; text-decoration: none; font-size: 14px; border: 1px solid #008F39;">
+                        <a href="{img_url}" target="_blank" style="display: inline-block; margin: 5px 0; padding: 8px 12px; background-color: rgba(51, 102, 204, 0.1); color: #006D2C; border-radius: 4px; text-decoration: none; font-size: 14px; border: 1px solid #008F39;">
                             <span style="display: flex; align-items: center;">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#008F39" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px;">
                                     <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
@@ -621,12 +620,12 @@ if prompt:
                     message_data["audio_html"] = audio_html
                 st.session_state.messages.append(message_data)
 
-# Pie de página con estilo mejorado usando colores CEFA
+# Pie de página con estilo mejorado usando colores corporativos
 st.markdown("""
 <div class='footer'>
     <div style="display: flex; justify-content: center; align-items: center; gap: 10px;">
         <span style="color: #006D2C; font-weight: 500;">Asistente Digital Textil © 2025</span>
-        <span style="color: #FFD700; font-size: 18px;">•</span>
+        <span style="color: #3366CC; font-size: 18px;">•</span>
         <span style="color: #333333;">Don Matias</span>
     </div>
 </div>
