@@ -625,9 +625,9 @@ if prompt:
 st.markdown("""
 <div class='footer'>
     <div style="display: flex; justify-content: center; align-items: center; gap: 10px;">
-        <span style="color: #006D2C; font-weight: 500;">Asistente Digital CEFA © 2025</span>
+        <span style="color: #006D2C; font-weight: 500;">Asistente Digital Textil © 2025</span>
         <span style="color: #FFD700; font-size: 18px;">•</span>
-        <span style="color: #333333;">Centro Formativo de Antioquia</span>
+        <span style="color: #333333;">Don Matias</span>
     </div>
 </div>
 """, unsafe_allow_html=True)
