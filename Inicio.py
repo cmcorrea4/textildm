@@ -252,7 +252,7 @@ st.markdown("""
         <span>¿De que color es el cierre para la referencia LOW RISE-RUSTY?</span>
     </div>
     <div class="example-question">
-        <span> Cual es la composición de la tela principal de Monastery? </span>
+        <span> ¿Cual es la composición de la tela principal de Monastery? </span>
     </div>
 </div>
 <div class='corp-decoration'></div>
