@@ -243,16 +243,16 @@ st.markdown("""
         Ejemplos de preguntas que puedes hacerle:
     </p>
     <div class="example-question">
-        <span>¿Quien es el proveedor de?</span>
+        <span>¿Quien es el proveedor de la base textil de Monastery?</span>
     </div>
     <div class="example-question">
         <span>¿Como es la jota en la referencia jogger femenino?</span>
     </div>
     <div class="example-question">
-        <span>¿Cual es el tamaño del cierre para  LOW RISE-RUSTY?</span>
+        <span>¿De que color es el cierre para la referencia LOW RISE-RUSTY?</span>
     </div>
     <div class="example-question">
-        <span> Cual es la fecha de entrega de HORSEBEAT Monastery? </span>
+        <span> Cual es la composición de la tela principal de Monastery? </span>
     </div>
 </div>
 <div class='corp-decoration'></div>
